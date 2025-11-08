@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table border = "1">
+            <tr> <!--Row 1-->
+                <th colspan = "3">
+                    About -- 114ZU1017
+                </th>
+            </tr>
+
+            <tr> <!--Row 2-->
+                <td rowspan = "3">
+                    <img src="./IMG_0377.jpg" alt="description" width= "200">
+                    <p align = "middle">personal photo</p>
+                </td>
+                <td colspan = "2">
+                    Name: <input type = "text" name = "name"><br>
+                    Gender:
+                    <input type= "radio" name = "gender" value = "Male"> Male 
+                    <input type= "radio" name = "gender" value = "Female"> Female 
+                    <input type = "radio" name = "gender"> Other
+                </td>
+            </tr>
+
+            <tr> <!--Row 3-->
+                <td>
+                    County:
+                    <select>
+                        <option value="Taipei">Taipei</option>
+                        <option value="Tainan">Tainan</option>
+                        <option value="Taichung">Taichung</option>
+                        <option value="Taoyuan">Taoyuan</option>
+                    </select>
+                </td>
+                <td>
+                    Birthday:
+                    <input type = "date">
+                </td>
+            </tr>
+
+            <tr> <!--Row 4-->
+                <td colspan = "2">
+                    E-mail: <input type = "email" name = "email">
+                </td>
+            </tr>
+
+            <tr> <!--Row 5-->
+                <td>
+                    Hobby
+                </td>
+                <td colspan = "2">
+                    <input type = "checkbox"> Swimming
+                    <input type = "checkbox"> Volleyball
+                    <input type = "checkbox"> Movie
+                    <input type = "checkbox"> Game
+                    <input type = "checkbox"> sleep
+                </td>
+            </tr>
+
+            <tr> <!--Row 6-->
+                <td>
+                    Skill
+                </td>
+                <td colspan = "2">
+                    <input type = "checkbox"> Java
+                    <input type = "checkbox"> HTML
+                    <input type = "checkbox"> Python
+                    <input type = "checkbox"> Microsoft Office
+                    <input type = "checkbox"> Premiere
+                </td>
+            </tr>
+
+            <tr> <!--Row 7-->
+                <td>
+                    Say Something 
+                </td>
+                <td colspan="2">
+                    <textarea name="say_something" placeholder="Say something here." style="width: 100%; box-sizing: border-box;"></textarea>
+                </td>
+            </tr>
+            <tr> <!--Row 8-->
+                <td colspan = "3">
+                    <input type = "submit" value = "提交">
+                    <input type = "reset" value = "重設">
+                </td>
+
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
