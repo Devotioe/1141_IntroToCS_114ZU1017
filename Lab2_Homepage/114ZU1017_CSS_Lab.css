@@ -39,7 +39,7 @@ body {
     position: relative; 
     top: 0em; 
     left: 0em; 
-    width: 60em; 
+    width: auto; 
 }
 
 .navbar li { 
