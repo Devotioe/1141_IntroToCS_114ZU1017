@@ -1,0 +1,207 @@
+html, body{
+    height: 100%;
+    margin : 0;
+    padding : 0
+}
+
+
+.main-container{ display: flex;
+                 flex-direction: row;
+                 width: 1000px;
+                 height: 100%;
+                 border-radius: 20px;
+                 overflow: hidden;
+                 margin: auto;
+                 background-color : pink;
+                 box-shadow: 10px 5px 5px gray;
+                }
+
+.left-panel{ 
+    display : flex; 
+    flex-direction: column; 
+    height: 100%;
+    width: 30%;
+    background-color: salmon;
+    align-items: center;
+    background-color: oldlace;
+}   
+               
+
+.right-panel{ display : block;
+
+                height: 100%;
+                width: 70%;
+                }
+
+
+.photo-panel { 
+    display: flex;
+    border : 1px;
+    border-radius : 30px;
+    overflow: hidden;
+    margin : 10px;
+    max-height: 30%;
+    justify-content: center;
+    align-items: center;
+    flex :1;
+    }
+
+#photo { display: block;
+       flex: row;
+       width: 100%;
+       aspect-ratio: 1 / 1;
+       height: 100%;
+       object-fit: cover;
+}
+
+               
+#logo { width : 10em;}
+
+.text-content { 
+    display: block;
+    color: black;
+    margin : 10px;
+    margin-top: 0;
+    width: 90%;}
+
+#skill_items .tag{
+    display: flex;
+    width: auto;
+    height: auto;
+    padding : 5px;
+    background-color: snow;
+    border-radius : 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+
+#skill_items{
+    display: flex;
+    flex :1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#link_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.link_item_img{
+    aspect-ratio: 1;
+    width: 50px;
+    height: auto;
+    border-radius : 100px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.link_item{
+    display: flex;
+    flex-direction: column;
+    padding : 5px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#HW_box{
+    display: flex;
+    flex-direction: column;
+}
+#HW_sections{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.hw-column{
+    display: flex;
+    flex-direction: column;
+    flex : 1;
+    margin: 5px;
+    padding: 10px;
+    background-color:honeydew;
+    border-radius: 10px;
+    
+}
+.lab-column{
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    flex : 1;
+    margin : 5px;
+    padding: 10px;
+    background-color:honeydew;
+}
+
+hr {
+    border: none; 
+    height: 1px; 
+    background-color: #333;
+    margin: 10px;
+}
+
+.section-title{
+    color: black;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    }
+
+.description {
+    color : black
+}
+
+.year{
+    color: darkblue;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 15px;
+}
+
+.section #education{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkgoldenrod;
+}
+
+.Perservance {
+    font-style: italic;
+    color : purple
+}
+.Avulsion {
+    font-style:normal;
+    color : darkgreen;
+}
+.HEATWAVE {
+    font-style: bold;
+    color : darkorange
+}
+.Broken_Reality {
+    font-style: italic;
+    color : blueviolet
+}
+
+.music-note {
+    font-style: italic;
+    color : grey
+}
+
+.education_item{
+    display: flex;
+    flex-direction: row;
+}
