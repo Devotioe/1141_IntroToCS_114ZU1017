@@ -102,7 +102,6 @@ html, body{
 .link_item{
     display: flex;
     flex-direction: column;
-    padding : 5px;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -178,6 +177,7 @@ a {
 a:hover {
     color: darkgoldenrod;
 }
+
 
 .Perservance {
     font-style: italic;
