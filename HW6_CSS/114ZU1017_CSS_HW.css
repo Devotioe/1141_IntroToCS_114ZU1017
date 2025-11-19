@@ -167,8 +167,8 @@ hr {
 
 .section #education{
     display: flex;
-    flex-direction: column;
-    margin: 5px;
+    flex-direction: row;
+    gap : 15px;
 }
 
 a {
@@ -199,9 +199,4 @@ a:hover {
 .music-note {
     font-style: italic;
     color : grey
-}
-
-.education_item{
-    display: flex;
-    flex-direction: row;
 }
