@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>114ZU1017_HW7_1A2B</h1>
+    <div>
+        Enter 4 unique numbers
+        <input type = "text" id = "box" maxlength="4">
+        <input type = "button" value = "Submit" onclick = "play()"><br>
+        <p id = "output"></p>
+    </div>
+    
+
+    <script>
+        var answer = generateAnswer();
+        var box = document.getElementById("box");
+        var user_input = "";
+        var output = document.getElementById("output");
+        var guessedArray = [];
+        var result = "";
+        var attemptCount = 0;
+
+    function isValid(input) {
+        const trimmedInput = input.trim(); 
+
+        if (trimmedInput.length !== 4) {
+            alert("Please enter 4 unique numbers.");
+            return false;
+        }
+
+        if (isNaN(trimmedInput)) {
+            alert("Please enter 4 unique numbers.");
+            return false;
+        }
+        
+        const uniqueDigits = new Set(trimmedInput);
+        
+        if (uniqueDigits.size !== 4) {
+            alert("Please enter 4 unique numbers.");
+            return false;
+        }
+        return true;
+    }
+        function checkAB(guess, ans){
+            var a = 0;
+            var b = 0;
+            for (let i = 0 ; i < 4 ; i ++ ){
+                if (guess[i] === ans[i]){
+                    a ++;
+                }
+            }
+            for ( let i = 0; i < 4 ; i++ ){
+                const char = guess[i];
+
+                if (guess[i] !== ans[i]){
+                    if (ans.includes(char)){
+                        b++;
+                    }
+                }
+            }
+            return a + "A" + b + "B"
+        }
+
+        function play(){
+            user_input = box.value;
+            box.value = "";
+            if(isValid(user_input)){
+                attemptCount ++
+                result = checkAB(user_input, answer);
+                output.innerHTML += "Attempts:  " + attemptCount + "    You've guessed : " + user_input + " " + result + "<br>"
+                if (user_input === answer){
+                    alert("Correct! The answer is: " + answer + "\nYou've tried " + attemptCount + " times!");
+                    document.getElementById("box").disabled = true; 
+                    document.querySelector('input[type="button"]').disabled = true; 
+                }
+            }
+                
+        }
+        function generateAnswer(){
+            var numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8 ,9]; 
+            var picker = 0
+            var answer = "";
+            for (let i = 0 ; i < 4 ; i ++){
+                picker = Math.floor(Math.random() * numArray.length );
+                answer += numArray[picker];
+                numArray.splice(picker, 1)
+            }
+            return answer;
+        }
+    </script>
+</body>
+</html>
