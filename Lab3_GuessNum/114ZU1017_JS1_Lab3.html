@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>114ZU1017_Number Guessing Game</h1>
+        <div id = "ans">
+            
+        </div>
+        <script>
+            var bottomRange = 1;    
+            var upperRange = 100;
+            var userNumber = 0;
+            var ansNumber = Math.floor(Math.random() * 100) + 1;
+            var chance = 7
+            var win = false;
+            var div = document.getElementById("ans");
+            while (chance > 0){
+                var userInput = window.prompt("Please enter your number" + " Range: " + bottomRange + " ~ " + upperRange + " " + "\nChances: " + chance);
+                if (userInput === null){
+                    alert("Please enter an integer between 1 and 100!")
+                    continue;
+                }
+                userInput = userInput.trim()
+                if (userInput === "" || isNaN(userInput)){
+                    alert("Please enter an integer between 1 and 100!")
+                    continue;
+                }
+                userNumber = parseInt(userInput)
+                if (userNumber > upperRange || userNumber < bottomRange){
+                    alert("Please enter an integer between " + bottomRange + " and " +  upperRange);
+                    continue;
+                }
+                if (userNumber > ansNumber && userNumber <= upperRange){
+                    upperRange = userNumber - 1;
+                }
+                if (userNumber < ansNumber && userNumber >= bottomRange){
+                    bottomRange = userNumber + 1;
+                }
+                if (userNumber === ansNumber){
+                    chance = 0;
+                    win = true;
+                    alert("You're correct!")
+                    div.innerHTML = '<img src="./images/correct.jpg" alt="Correct">';
+                    break;
+                }
+                chance -= 1;
+                if (chance === 0){
+                    alert("The answer is : " + ansNumber);
+                    div.innerHTML = '<img src="./images/wrong.jpg" alt="Wrong">';
+
+                }
+            }
+        </script>
+    </body>
+    </html>
